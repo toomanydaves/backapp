@@ -1,0 +1,27 @@
+{
+  "name": "backapp",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/toomanydaves/backapp.git"
+  },
+  "dependencies": {
+    "bower": "~1.2.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-cli": "~0.1.13"
+  },
+  "devDependencies": {
+    "chai": "*",
+    "grunt": "~0.4.1",
+    "grunt-bower-task": "~0.3.2",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-handlebars": "~0.6.1",
+    "grunt-contrib-yuidoc": "~0.5.0",
+    "lodash": "~2.4.1",
+    "mocha": "*",
+    "requirejs": "~2.1.10",
+    "jsdom": "~0.10.1",
+    "sinon-chai": "~2.5.0",
+    "sinon": "~1.8.1"
+  }
+}
