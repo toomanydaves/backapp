@@ -76,6 +76,7 @@ define([
             var matchedRoute = Backbone.History.prototype.start.call(this, _.extend({ silent: true }, options));
 
             if ( this._hasPushState ) {
+
                 _.bindAll(this, '_actualize');
 
                 $(window)
@@ -112,9 +113,13 @@ define([
          * @return `this`
          */
         _initialize: function () {
+            var state = this;
+
             _.each(this._managers, function (manager) {
-                manager.on('change:url', this._setLocation)
-            }, this);
+                manager.on('change:state', function () {
+                    state._actualizeLocation();
+                })
+            });
 
             return this;
         },
@@ -125,26 +130,26 @@ define([
          * @return `this`
          */
         _actualize: function () {
-            _.each(this.managers, function (manager) {
+            _.each(this._managers, function (manager) {
                 manager.actualize();
             });
 
             return this;
         },
         /**
-         * Set the location using to the combined url of the state's managers
-         * @method _setLocation
+         * Reset the location using to the combined locations of the state's managers
+         * @method _actualizeLocation
          * @private
          * @return `this`
          */
-        _setLocation: function () {
-            var url = '';
+        _actualizeLocation: function () {
+            var location = '';
 
             _.each(this.managers, function (manager) {
-                url += manager.getUrl();
+                location += manager.getLocation();
             }, this);
 
-            this.navigate(url);
+            Backbone.History.prototype.navigate.call(this, location);
 
             return this;
         }

@@ -8,12 +8,14 @@
      * @depends
      * - [jsdom](http://npmjs.org/package/jsdom)
      * - [lodash](http://npmjs.org/package/lodash)
+     * - [url](http://npmjs.org/package/url)
      * - {{#crossLinkModule "test.setup.requirejs"}}{{#crossLinkModule}}
      * @return {Function}
     */
 
     var jsdom = require('jsdom');
     var _ = require('lodash');
+    var URL = require('url');
     var requirejs = require('../../setup/requirejs');
 
 
@@ -40,18 +42,7 @@
         this._applyState(this._states[this._index], true, callback);
     };
     var _applyState = function (state, signalPopstate, callback) {
-        var url = state.url.split('#');
-        var pathname = url.shift();
-
-        if ( pathname.charAt(0) !== '/' ) {
-            pathname = [ this._location.pathname, pathname ].join('/');
-        }
-
-        this._location._url.pathname = pathname;
-
-        if ( url.length ) {
-            this._location._url.hash = '#' + url.shift();
-        }
+        this._location._url = URL.parse(URL.resolve(this._location._url.href, state.url));
 
         if ( signalPopstate ) {
             this._signalPopstate(state, callback);
