@@ -16,8 +16,12 @@
      *  @param {Function} browser
      *  @param {Function} requirejs
      */
+
+    var sinon = require('sinon');
+
     module.exports = {
-        spy: require('sinon').spy,
+        spy: sinon.spy,
+        sandbox: sinon.sandbox,
         expect: require('./expect/chai-expect'),
         browser: require('./browser/jsdom-env'),
         requirejs: require('./requirejs')
