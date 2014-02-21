@@ -5,6 +5,9 @@
     "type": "git",
     "url": "https://github.com/toomanydaves/backapp.git"
   },
+  "authors": [
+    "Sean Jacke <seanineurope@gmail.com> (https://github.com/toomanydaves)"
+  ],
   "dependencies": {
     "bower": "~1.2.0",
     "grunt-contrib-clean": "~0.5.0",
