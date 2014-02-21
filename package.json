@@ -1,30 +1,30 @@
 {
   "name": "backapp",
   "version": "0.0.1",
+  "description": "An extensible, single-page application framework for domain-driven design",
+  "homepage": "http://backappjs.org",
+  "license": "MIT",
+  "keywords": [ "amd", "backbone", "framework" ]
   "repository": {
     "type": "git",
     "url": "https://github.com/toomanydaves/backapp.git"
   },
-  "authors": [
-    "Sean Jacke <seanineurope@gmail.com> (https://github.com/toomanydaves)"
-  ],
-  "dependencies": {
-    "bower": "~1.2.0",
-    "grunt-contrib-clean": "~0.5.0",
-    "grunt-cli": "~0.1.13"
-  },
+  "author": "Sean Jacke <seanineurope@gmail.com> (https://github.com/toomanydaves)",
+  "bugs": "https://github.com/toomanydaves/backapp/issues?labels=bug",
   "devDependencies": {
+    "bower": "~1.2.0",
     "chai": "*",
     "grunt": "~0.4.1",
     "grunt-bower-task": "~0.3.2",
+    "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-copy": "~0.5.0",
     "grunt-contrib-handlebars": "~0.6.1",
     "grunt-contrib-yuidoc": "~0.5.0",
+    "jsdom": "~0.10.1",
     "lodash": "~2.4.1",
     "mocha": "*",
     "requirejs": "~2.1.10",
-    "jsdom": "~0.10.1",
-    "sinon-chai": "~2.5.0",
-    "sinon": "~1.8.1"
+    "sinon": "~1.8.1",
+    "sinon-chai": "~2.5.0"
   }
 }
