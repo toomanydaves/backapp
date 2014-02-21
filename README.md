@@ -1,21 +1,20 @@
-backapp
-=======
+[backapp](http://toomanydaves.github.io/backapp)
+================================================
 
-An extensible, single-page application framework for domain-driven design.
+> An extensible, single-page application framework for domain-driven design.
 
-Currently powered by the following, core technologies:
-* Module support: [RequireJS](http://requirejs.org)
-* MV\* and object-orientation: [Backbone](http://backbonejs.org)
-* Reactivity: [Backbone Stickit](http://nytimes.github.io/backbone.stickit)
-* Function programming abstractions: [Lodash](http://lodash.com)
+Including:
+* Module support ([RequireJS](http://requirejs.org))
+* MV\* and object-orientation ([Backbone](http://backbonejs.org))
+* Reactivity ([Backbone Stickit](http://nytimes.github.io/backbone.stickit))
+* Function programming abstractions ([Lodash](http://lodash.com))
 * DOM Manipulation, HTTP and Promises: [jQuery](http://jquery.com)
 * Responsive design: [Twitter Bootstrap](http://getbootstrap.com)
 * TDD: [Mocha](http://visionmedia.github.io/mocha) with [Chai](http://chaijs.com) and [Sinon](http://sinonjs.org)
+and [much more](http://toomanydaves.github.io/backapp).
 
-[Learn more.](http://toomanydaves.github.io/backapp)
-
-Get started
------------
+Getting started
+---------------
 
 You will need [git](http://git-scm.com/downloads) [node + npm](http://nodejs.org), and [grunt](http://gruntjs.com/getting-started) on the command line.
 
