@@ -20,8 +20,9 @@
     var sinon = require('sinon');
 
     module.exports = {
-        spy: sinon.spy,
         sandbox: sinon.sandbox,
+        spy: sinon.spy,
+        stub: sinon.stub,
         expect: require('./expect/chai-expect'),
         browser: require('./browser/jsdom-env'),
         requirejs: require('./requirejs')

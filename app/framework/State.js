@@ -25,9 +25,9 @@ define([
         /**
          * @constructor
          * @param {Object} config
-         *     @param {Array} [config.handlers] A hash of route keys and handler values, see {{#crossLink "State:handlers"}}{{/crossLink}}
-         *     @param {Array} [config.managers] An array of manager objects, see {{#crossLink "State:_managers"}}{{/crossLink}}
-         *     @param {Object} [config.initialize] An options hash to pass when calling {{#crossLink "State:_initialize"}}{{/crossLink}}
+         *     @param {Array} [config.handlers] {{#crossLink "State:handlers"}}{{/crossLink}}
+         *     @param {Array} [config.managers] {{#crossLink "State:_managers"}}{{/crossLink}}
+         *     @param {Object} [config.initialize] An options for {{#crossLink "State:_initialize"}}{{/crossLink}}
          *     @param {Object} config.mixin
          *         @param {Function} config.mixin.openPage
          * @extends [backbone.History](http://backbonejs.org/docs/backbone.html#section-154)
