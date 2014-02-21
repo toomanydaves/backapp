@@ -1,4 +1,22 @@
+# Logs and databases #
+######################
 *.log
+*.sql
+*.sqlite
+
+# OS specific files #
+#####################
+.DS_Store
+.DS_Store?
+
+# VIM temp files #
+##################
+*~
+.*.sw*
+.swp
+
+# Generated content #
+#####################
 node_modules/
 dist/
 lib/
