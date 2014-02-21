@@ -50,14 +50,14 @@
 
         describe('set()', function () {
             describe('_pageToUrl()', function () {
-                it('should trigger a state change with the new URL', function () {
-                    var changeState = spy();
+                it('should trigger a location change with the new URL', function () {
+                    var onLocationChange = spy();
 
-                    pageLocation.on('change:state', changeState);
+                    pageLocation.on('change', onLocationChange);
 
                     pageLocation.set('bazz');
 
-                    expect(changeState).to.have.been.calledWith('bazz', pageLocation);
+                    expect(onLocationChange).to.have.been.calledWith('bazz');
                 });
             });
         });

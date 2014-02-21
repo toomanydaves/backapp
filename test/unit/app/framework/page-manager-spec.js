@@ -7,113 +7,178 @@
     var expect = config.expect;
     var sandbox = config.sandbox.create();
     var stub = function () { return sandbox.stub(); };
+    var reset = function () { sandbox.reset(); };
 
     describe('pageManager', function () {
-        var pageParser = { getUrl: stub(), getLocation: stub(), setLocation: stub() };
+        var pageLocation;
         var pageManager;
 
         before(function (done) {
-            requirejs([ 'app/framework/PageManager' ], function (PageManager) {
-                pageManager = new PageManager({ showPage: stub(), pageParser: pageParser });
+            browser.call(this, void 0, function () {
+                requirejs([ 'backbone', 'app/framework/PageManager' ], function (Backbone, PageManager) {
+                    pageLocation = _.extend(
+                        { getUrl: stub(), get: stub(), set: stub() },
+                        Backbone.Events
+                    );
 
-                done();
+                    pageManager = new PageManager({ showPage: stub(), pageLocation: pageLocation });
+
+                    done();
+                });
             });
         });
 
         describe('actualize()', function () {
-            describe('_pageParser', function () {
-                describe('getLocation()', function () { });
-                    it('should get the current location from the parser', function () {
+            before(function () {
+                stub(pageManager, '_retrieveState');
+            });
+
+            describe('_pageLocation', function () {
+                describe('get()', function () {
+                    it('should get the current location', function () {
                         pageManager.actualize();
 
-                        expect(pageParser.getLocation).to.have.been.called;
+                        expect(pageLocation.get).to.have.been.called;
                     });
     
-                    after(function () {
-                        sandbox.reset();
-                    });
+                    after(reset);
                 });
             });
 
             describe('_actualizeState()', function () {
-                before(function () {
-                    stub(pageManager, '_loadState');
-                });
-
                 describe('_retrieveState()', function () {
                     it('should retrieve the state for the current location', function () {
-                        pageParser.getLocation.returns('foo');
+                        pageLocation.get.returns('foo');
 
                         pageManager.actualize();
 
                         expect(pageManager._retrieveState).to.have.been.calledWith('foo')
                     });
 
-                    after(function () {
-                        sandbox.reset();
-                    });
+                    after(reset);
+                });
+            });
+
+            describe('_transition()', function {
+                var page = { url: 'foo' };
+
+                before(function () {
+                    pageManager._retrieveState.returns(page);
                 });
 
-                describe('showPage()', function () {
-                    var currentState = { };
+                it('should transition to the actualized state', function () {
+                    pageManager.actualize();
 
-                    before(function () {
-                        stub(pageManager, '_retrieveState');
-
-                        pageManager._retrieveState.returns(currentState);
-                    });
-                
-                    it('should show the current state', function () {
-                        pageManager.actualize();
-
-                        expect(pageManager.showPage).to.have.been.calledWith(currentState);
-                    });
-
+                    expect(pageManager._transition).to.have.been.calledWith(page);
                 });
 
-                describe('_removePage()', function () {
-                    var deferred;
-
-                    before(function (done) {
-                        stub(pageManager, '_removePage');
-
-                        requirejs([ 'jquery' ], function ($) {
-                            deferred = new $.Deferred();
-
-                            pageManager.showPage.returns(deferred);
-
-                            done();
-                        });
-                    });
-
-                    
-                    it('should not remove the previous state before finished showing the current one', function () {
-                        pageManager.actualize();
-
-                        expect(pageManager._removePage).to.not.have.been.called;
-
-                        deferred.resolve();
-
-                        expect(pageManager._removePage).to.have.been.called;
-                    });
-                });
-
-                afterEach(function () {
-                });
+                after(reset);
             });
         });
 
         describe('setPage()', function () {
-            describe('_pageUrlParser', function () {
-                describe('setUrlFromPage()', function () {
+            describe('_pageLocation', function () {
+                describe('set()', function () {
+                    var onLocationChange = spy();
+
+                    before(function () {
+                        pageManager.on('change:location', onLocationChange);
+                    });
+
+                    it('should set the page location', function () {
+                        pageManager.setPage({ url: 'foo' });
+
+                        expect(pageLocation.set).to.have.been.calledWith('foo');
+                    });
+
+                    it('should trigger a location change event', function () {
+                        pageLocation.trigger('change', 'bar');
+
+                        expect(onLocationChange).to.have.been.calledWith('bar', pageManager);
+                    });
+
+                    afterEach(reset);
+                });
+            });
+
+            describe('_transition()', function () {
+                var page = { url: 'foo' };
+
+                it('should transition to the set page', function () {
+                    pageManager.setPage(page);
+
+                    expect(pageManager._transition).to.have.been.calledWith(page)
                 });
             });
         });
 
-        describe('getUrl()', function () { });
+        describe('_transition()', function () {
+            var page = { url: 'foo' };
+            var Deferred;
 
-        describe('_addPage()', function () { });
+            before(function (done) {
+                requirejs([ 'jquery' ], function ($) {
+                    Deferred = $.Deferred;
 
-        describe('_removePage()', function () { });
+                    done();
+                });
+            });
+
+            describe('showPage()', function () {
+                it('should show the given state', function () {
+                    pageManager._transition(page);
+
+                    expect(pageManager.showPage).to.have.been.calledWith(page);
+                });
+
+                after(reset);
+            });
+
+            describe('_removePage()', function () {
+                var deferred;
+
+                before(function () {
+                    stub(pageManager, '_removePage');
+
+                    deferred = new $.Deferred();
+
+                    pageManager.showPage.returns(deferred);
+                });
+
+                it('should not remove a previous page before it is finished showing the current one', function () {
+                    pageManager._transition(page);
+
+                    expect(pageManager._removePage).to.not.have.been.called;
+
+                    deferred.resolve();
+
+                    expect(pageManager._removePage).to.have.been.called;
+                });
+
+                after(reset);
+            });
+
+            describe('_addPage()', function () {
+                var deferred;
+
+                before(function () {
+                    stub(pageManager, '_addPage');
+
+                    deferred = new $.Deferred();
+
+                    pageManager.showPage.returns(deferred);
+                });
+
+                it('should not add the current page before it is finished showing it', function () {
+                    pageManager._transition(page);
+
+                    expect(pageManager._addPage).to.not.have.been.called;
+
+                    deferred.resolve();
+
+                    expect(pageManager._addPage).to.have.been.calledWith(page);
+                });
+            });
+        });
     });
 })(require, describe, it);
