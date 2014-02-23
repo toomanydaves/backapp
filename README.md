@@ -10,17 +10,17 @@
 
 ## backapp? ##
 
-The name, **backapp**, i.e. *Backbone-Application*, reflects a key point about the state of this project at its inception – which also happens to be its current state: the functionality provided by **[Backbone.js](http://backbonejs.org)** provides the foundation upon which the source code of this project rests.
+The name, **backapp**, i.e. *Backbone-Application*, reflects a key point about the state of this project at its inception (which also happens to be its current state): the functionality provided by **[Backbone.js](http://backbonejs.org)** provides the foundation upon which the implementation of this project currently rests.
 
-Of course, as every developer knows, state changes; yet, regardless of whether its source will always remain a dependency of future versions of this codebase, the fact will always be true that this project would not exist where it not for **Backbone**.
+Of course, as every developer knows, state changes; and yet, regardless of whether or not the **Backbone** source is among those listed as dependencies, the fact will remain that this project would not exist were it not for **Backbone**.
 
-**Backbone** itself provides no *application* - part of a central design philosophy to avoid being monolithic and impose as little as possible on its users, which, it's worth mentioning, has, in no small part, been responsible for **Backbone**'s continued relevance to **JavaScript**, even after wave after wave of alternative solutions.
+In *its* current state, **Backbone** provides no *application*, something reflective of a central design philosophy of **Backbone**, Don't try to do too much, which, it's worth mentioning, has also, in no small part, been responsible for **Backbone**'s continued relevance, even after wave after wave of alternative solutions.
 
-It tries and does a few things well – mainly provide a base `View` and `Model` and `Collection` classes that support data-binding and functional programming (the latter of which is accomplish by **Backbone's** own and only dependency, **[underscore.js](http://underscorejs.org)**.
+Indeed, that which **Backbone** sets out to do, it does well – mainly provide base `View`, `Model` and `Collection` classes that support data-binding and functional programming (the latter of which is accomplished by **Backbone's** own and only dependency, **[underscore.js](http://underscorejs.org)**. **backapp* takes these features as given, and proceeds from there.
 
-The name, *backapp*, however, also refers to a key attribute of this project's own intended contribution to application development in JavaScript, hopefully both in and outside of what is currently considered the province of *Backbone*. In this context, *backapp* is a reference to building applications that are as capable of moving backwards through their previous states, as they are following the user's path forward to new ones. 
+In a second, and equally if not more important sense, the name, *backapp*, refers to this project's own key feature, what it intends on contributing to the enterprise of application development in JavaScript. *backapp* is a reference to building *app*lications that are as capable of moving *back*ward through their previous states, as they are following the user's path forward to new ones. 
 
-To accomplish this, aside from the `Application` class, **backapp** introduces two important feature implementations, `State` and `PersistenceStrategy`. The functionality of these classes is crucial for **backapps** to exhibit *optimistic behavior* with the confidence of being able to return to any previous state should the need arise. 
+To accomplish this, aside from `Application`, **backapp** introduces two important feature implementations, `State` and `PersistenceStrategy`. Among other things, the functionality of these classes is crucial for **backapps** to exhibit **optimistic behavior** in their user experience with the capability to easily **return to any previous state** should the need arise. 
 
 Other important implementation details of **backapp** concern its integrated support for **Test-Driven Development**, **Domain-Driven Design** and **modularity**.
 
