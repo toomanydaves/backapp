@@ -22,4 +22,6 @@ In a second and equally, if not more important sense, the name, **backapp**, ref
 
 To accomplish this, aside from `Application`, **backapp** introduces two important feature implementations, `State` and `PersistenceStrategy`. The functionality of these classes is crucial for **backapps** to implement **optimistic behavior** in their user experience with the capability to easily **return to any previous state** should the need arise. 
 
-In **backapp**, this understanding of the core functionality of what an application should be able to do is complemented by integrated support for **Test-Driven Development**, **Domain-Driven Design** and **modularity**. Visit [backappjs.org](http://backappjs.org) to learn more.
+In **backapp**, this understanding of the core functionality of what an application should be able to do is complemented by integrated support for **Test-Driven Development**, **Domain-Driven Design** and **modularity**.
+
+Visit [backappjs.org](http://backappjs.org) to learn more.
