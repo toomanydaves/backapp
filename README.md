@@ -10,18 +10,16 @@
 
 ## backapp? ##
 
-The name, **backapp**, i.e. *Backbone Application*, reflects a key point about the state of this project at its inception (which also happens to be its current state): the functionality provided by **[Backbone.js](http://backbonejs.org)** provides the foundation upon which the implementation of this project currently rests.
+The name, **backapp**, as a shorthand for *Backbone Application*, derives from a central implementation detail of this project at its inception (which, at the present moment, also happens to be its current state): It has been built atop the core MV([Observer](http://en.wikipedia.org/wiki/Observer_pattern)) functionality provided by the **[Backbone.js library](http://backbonejs.org)**.
 
-Of course, as every developer knows, state changes; and yet, regardless of whether or not the **Backbone** source is among those listed as dependencies, the fact will remain that this project would not exist were it not for **Backbone**.
+In *its* current state, **Backbone** provides no *application*, something reflective of its adoption of the design principle to try not to do too much, which, it's worth mentioning, has also, in no small part, been responsible for **Backbone**'s continued popularity.
 
-In *its* current state, **Backbone** provides no *application*, something reflective of a central design philosophy of its own, Don't try to do too much, which, it's worth mentioning, has also, in no small part, been responsible for **Backbone**'s continued relevance, even after wave after wave of alternative solutions.
+Indeed, that which **Backbone** sets out to do, it does well – mainly provide base `View`, `Model` and `Collection` classes that support data-binding, in addition to functional programming abstractions (the latter of which being accomplished by **Backbone's** own and only dependency, **[underscore.js](http://underscorejs.org)**.
 
-Indeed, that which **Backbone** sets out to do, it does well – mainly provide base `View`, `Model` and `Collection` classes that support data-binding and functional programming (the latter of which is accomplished by **Backbone's** own and only dependency, **[underscore.js](http://underscorejs.org)**. **backapp* takes these features as given, and proceeds from there.
+**backapp** begins with these features , and proceeds from there. Of course, as every developer knows, state changes; yet, even if this project came to stop relying on **Backbone** implementation of this core functionality, the name **backapp** would remain relevant for more than historical reasons.
 
-In a second, and equally if not more important sense, the name, *backapp*, refers to this project's own key feature, what it intends on contributing to the enterprise of application development in JavaScript. *backapp* is a reference to building *app*lications that are as capable of moving *back*ward through their previous states, as they are following the user's path forward to new ones. 
+In a second and equally, if not more important sense, the name, **backapp**, refers to this project's killer app, what it has to contribute to the enterprise of application development in JavaScript. **backapp** is a reference to building **app**lications that are, among other things, as capable of moving **back**ward through their previous states, as they are following the user's path forward to new ones. 
 
-To accomplish this, aside from `Application`, **backapp** introduces two important feature implementations, `State` and `PersistenceStrategy`. Among other things, the functionality of these classes is crucial for **backapps** to exhibit **optimistic behavior** in their user experience with the capability to easily **return to any previous state** should the need arise. 
+To accomplish this, aside from `Application`, **backapp** introduces two important feature implementations, `State` and `PersistenceStrategy`. The functionality of these classes is crucial for **backapps** to implement **optimistic behavior** in their user experience with the capability to easily **return to any previous state** should the need arise. 
 
-Other important implementation details of **backapp** concern its integrated support for **Test-Driven Development**, **Domain-Driven Design** and **modularity**.
-
-Visit [backappjs.org](http://backappjs.org) to learn more.
+In **backapp**, this understanding of the core functionality of what an application should be able to do is complemented by integrated support for **Test-Driven Development**, **Domain-Driven Design** and **modularity**. Visit [backappjs.org](http://backappjs.org) to learn more.
