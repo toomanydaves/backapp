@@ -2,34 +2,36 @@
     'use strict';
 
     var config = require('../../../setup/config');
-    var spy = config.spy;
-    var expect = config.expect;
+
     var browser = config.browser;
     var requirejs = config.requirejs;
-    var classes;
+    var expect = config.expect;
+    var sandbox = config.sandbox.create();
+    var spy = function () { return sandbox.spy(); };
+    var reset = function () { sandbox.reset(); };
+    var classes = { };
     var state;
-    var manager;
 
     describe('state', function () {
         before(function (done) {
-            // Mimic a browser environment.
-            browser.apply(this,  [ { }, function () {
-                // Load the required modules.
-                requirejs([ 'backbone', 'app/framework/State' ], function (Backbone, State) {
-                    // Pass classes to spec.
-                    classes = { State: State };
+            browser.call(this, { }, function () {
+                requirejs([ 'backbone', 'app/State' ], function (Backbone, State) {
+                    classes.State = State;
                     classes['Backbone.History'] = Backbone.History;
-                    // Mock a manager.
-                    manager = _.extend(
-                        { 
-                            getUrl: function () { return ''; },
-                            actualize: function () { }
-                        },
-                        Backbone.Events
-                    );
 
                     // Instantiate a state object.
-                    state = new State({ mixin: { showPage: function () { } }, managers: [ manager ] });
+                    state = new State({ managers: [ 
+                        _.extend(
+                            { getUrl: spy(function () { return 'foo'; }), actualize: spy() },
+                            Backbone.Events
+                        ),
+                        _.extend(
+                            { getUrl: spy(function () { return 'bar'; }), actualize: spy() },
+                            Backbone.Events
+                        )
+                    ] });
+
+                    spy(state, '_resetUrl');
 
                     done();
                 });
@@ -40,51 +42,53 @@
             expect(state).to.be.an.instanceof(classes['Backbone.History']);
         });
 
-        describe('_actualizeLocation', function () {
-            before(function () {
-                spy(state, '_actualizeLocation');
-            });
+        it('should reset the URL when a manager announces its state has changed', function () {
+            state._managers[0].trigger('change:state', 'buz', state._managers[0]);
 
-            it('should actualize its location whenever a manager changes its state', function () {
-                expect(state._actualizeLocation).to.not.have.been.called;
-
-                manager.trigger('change:state');
-
-                expect(state._actualizeLocation).to.have.been.calledOnce;
-            });
-
-            after(function () {
-                state._actualizeLocation.restore();
-            });
+            expect(window.location.pathname).to.equal('buz#bar');
         });
 
         describe('start', function () {
-            before(function () {
-                //spy(state, '_actualize');
-                spy(manager, 'actualize');
+            it('should actualize its state by default when starting', function () {
+                state.start({ pushState: true });
+                expect(state._actualize).to.have.been.called;
+            });
 
+            it('should not actualize its state when starting silently', function () {
                 state.start({ pushState: true, silent: true });
+                expect(state._actualize).to.not.have.been.called;
             });
 
-            it('should selectively repress actualizing its managers\' state when starting', function () {
-                expect(manager.actualize).to.not.have.been.called;
+            afterEach(function () {
+                state.stop();
+                reset();
+            });
+        });
+
+        describe('_actualize', function () {
+            it('should actualize its managers\' states', function () {
+                state._actualize();
+                
+                _.each(state._managers, function (manager) {
+                    expect(manager.actualize).to.have.been.called;
+                });
             });
 
-            describe('_actualize', function () {
+            describe('history.back()', function () {
                 before(function (done) {
-                    window.history.pushState({ }, '', '/one');
-                    window.history.pushState({ }, '', '/two');
+                    window.history.pushState({ }, '', '/foo');
+                    window.history.pushState({ }, '', '/bar');
                     window.history.back(done);
                 });
 
-                it('should actualize its managers\' state when the location changes', function () {
-                    expect(manager.actualize).to.have.been.calledOnce;
+                it('should actualize its state', function () {
+                    expect(state._actualize).to.have.been.called;
                 });
+
+                after(reset);
             });
 
-            after(function () {
-                manager.actualize.restore();
-            });
+            after(reset);
         });
     });
 })(require, describe, it);
