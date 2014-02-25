@@ -4,7 +4,7 @@
     var config = require('../../../setup/config');
 
     var browser = config.browser;
-    var requirejs = config.requirejs;
+    var amd = config.amd;
     var expect = config.expect;
     var sandbox = config.sandbox.create();
     var spy = function () { return sandbox.spy(); };
@@ -15,7 +15,7 @@
     describe('state', function () {
         before(function (done) {
             browser.call(this, { }, function () {
-                requirejs([ 'backbone', 'app/State' ], function (Backbone, State) {
+                amd([ 'backbone', 'app/State' ], function (Backbone, State) {
                     classes.State = State;
                     classes['Backbone.History'] = Backbone.History;
 
