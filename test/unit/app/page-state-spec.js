@@ -4,7 +4,7 @@
     var config = require('../../../setup/config');
 
     var browser = config.browser;
-    var requirejs = config.requirejs;
+    var amd = config.amd;
     var expect = config.expect;
     var sandbox = config.sandbox.create();
     var stub = function () { return sandbox.stub(); };
@@ -14,7 +14,7 @@
 
         before(function (done) {
             browser.call(this, void 0, function () {
-                requirejs([ 'app/PageState' ], function (PageState) {
+                amd([ 'app/PageState' ], function (PageState) {
                     pageState = new PageState();
 
                     done();
