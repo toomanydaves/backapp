@@ -3,7 +3,7 @@
 
     var config = require('../../../setup/config');
 
-    var requirejs = config.requirejs;
+    var amd = config.amd;
     var expect = config.expect;
     var sandbox = config.sandbox.create();
     var stub = function () { return sandbox.stub(); };
@@ -15,7 +15,7 @@
 
         before(function (done) {
             browser.call(this, void 0, function () {
-                requirejs([ 'backbone', 'app/PageStateManager' ], function (Backbone, PageStateManager) {
+                amd([ 'backbone', 'app/PageStateManager' ], function (Backbone, PageStateManager) {
                     pageState = _.extend(
                         { get: stub(), set: stub(), getUrl: stub() },
                         Backbone.Events
@@ -117,7 +117,7 @@
             var Deferred;
 
             before(function (done) {
-                requirejs([ 'jquery' ], function ($) {
+                amd([ 'jquery' ], function ($) {
                     Deferred = $.Deferred;
 
                     done();
