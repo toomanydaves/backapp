@@ -13,6 +13,7 @@
     describe('persistenceStrategy', function () {
         var classes = { };
         var persistenceStrategy;
+        var deferred;
 
         before(function (done) {
             requirejs([ 'app/PersistenceStrategy' ], function (PersistenceStrategy) {
@@ -22,7 +23,7 @@
             });
         });
 
-        it('should use whatever syncing method it receives', function () {
+        it('should override default syncing method if desired', function () {
             var syncMethod = spy();
             var args = { a: 'a', b: 'b', c: 'c' };
 
@@ -37,11 +38,15 @@
         after(reset);
 
         describe('sync', function () {
+            before(function () {
+                persistenceStrategy = new classes.PersistenceStrategy();
+            });
+
             describe('_Request()', function () {
                 it('should be created whenever sync is called', function () {
                     persistenceStrategy.sync();
 
-                    var request = persistenceStrategy._Request.returnValues[0]
+                    var request = persistenceStrategy._Request.returnValues[0];
 
                     expect(request).to.exist;
                 });
@@ -49,7 +54,7 @@
                 it('should be a read request for every read request sync receives', function () {
                     persistenceStrategy.sync('read');
 
-                    var request = persistenceStrategy._Request.returnValues[0]
+                    var request = persistenceStrategy._Request.returnValues[0];
 
                     expect(request._type).to.equal('READ');
                 });
@@ -61,7 +66,7 @@
                     _.each([ 'create', 'update', 'delete' ], function (requestType) {
                         persistenceStrategy.sync(requestType);
 
-                        request = persistenceStrategy._Request.returnValues[i]
+                        request = persistenceStrategy._Request.returnValues[i];
 
                         expect(request._type).to.equal('WRITE');
                     });
@@ -71,8 +76,86 @@
             });
         
             describe('_processRequest', function () {
-                spy(persistenceStrategy, '_processRequest');
+                before(function (done) {
+                    spy(persistenceStrategy, '_processRequest');
 
+                    requirejs([ 'jquery' ], function ($) {
+                        classes.$ = $;
+
+                        stub($, 'ajax');
+
+                        done();
+                    });
+                });
+
+                beforeEach(function () {
+                    deferred = new classes.$.Deferred();
+
+                    classes.$.ajax.returns(deferred);
+                });
+
+                it('should process read requests concurrently', function () {
+                    persistenceStrategy.sync('read');
+                    persistenceStrategy.sync('read');
+
+                    expect(classes.$.ajax).to.have.been.calledTwice;
+                });
+
+                it('should not issue further requests until a write request returns successfully', function () {
+                    persistenceStrategy.sync('create');
+                    persistenceStrategy.sync('read');
+
+                    expect(classes.$.ajax).to.have.been.calledOnce;
+
+                    deferred.resolve();
+
+                    expect(classes.$.ajax).to.have.been.calledTwice;
+                });
+
+                it('should await confirmation before issueing queued requests after an unsuccessful write request',
+                    function () {
+                        persistenceStrategy.sync('create');
+                        persistenceStrategy.sync('read');
+
+                        deferred.reject();
+
+                        expect(classes.$.ajax).to.have.been.calledOnce;
+
+                        persistenceStrategy.resume();
+
+                        expect(classes.$.ajax).to.have.been.calledTwice;
+                    }
+                );
+
+                afterEach(reset);
+
+                describe('promise', function () {
+                    beforeEach(function () {
+                        deferred = new classes.$.Deferred();
+
+                        classes.$.ajax.returns(deferred);
+                    });
+
+                    it('should be resolved when a request returns successfully', function (done) {
+                        var sync = persistenceStrategy.sync();
+                        var response = { foo: 'bar' };
+
+                        deferred.resolve(response);
+
+                        expect(sync).to.be.fulfilledWith(response);
+                    });
+
+                    it('should pass the error when a request fails', function () {
+                        var sync = persistenceStrategy.sync();
+                        var error = new Error();
+                        
+                        deferred.reject(error);
+
+                        expect(sync).to.be.rejectedWith(error);
+                    });
+
+                    afterEach(reset);
+                });
             });
         });
     });
