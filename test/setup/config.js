@@ -11,20 +11,15 @@
      * - {{#crossLinkModule "test.setup.browser.jsdom-env"}}{{/crossLinkModule}}
      * - {{#crossLinkModule "test.setup.requirejs"}}{{/crossLinkModule}}
      * @return {Object}
-     *  @param {Function} spy
-     *  @param {Function} expect
+     *  @param {Function} amd
      *  @param {Function} browser
-     *  @param {Function} requirejs
+     *  @param {Function} expect
+     *  @param {Function} sandbox
      */
-
-    var sinon = require('sinon');
-
     module.exports = {
-        sandbox: sinon.sandbox,
-        spy: sinon.spy,
-        stub: sinon.stub,
-        expect: require('./expect/chai-expect'),
+        amd: require('./amd/requirejs'),
+        sandbox: require('sinon').sandbox,
         browser: require('./browser/jsdom-env'),
-        requirejs: require('./requirejs')
+        expect: require('./expect/chai-expect')
     };
 })(module, require);
