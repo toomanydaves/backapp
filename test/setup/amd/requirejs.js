@@ -10,13 +10,12 @@
      * - [requirejs](https://npmjs.org/package/requirejs)
      * @return {Function}
      */
-
     var _ = require('lodash');
     var requirejs = require('requirejs');
 
     requirejs.config(_.merge(
         { nodeRequire: require },
-        require('../../require.json')
+        require('../../../require.json')
     ));
 
     module.exports = requirejs;
