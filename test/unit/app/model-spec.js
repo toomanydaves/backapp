@@ -2,7 +2,7 @@
     'use strict';
 
     var config = require('../../setup/config');
-    var requirejs = config.requirejs;
+    var amd = config.amd;
     var expect = config.expect;
     var sandbox = config.sandbox.create();
     var spy = function () { return sandbox.spy(); };
@@ -14,7 +14,7 @@
         var classes;
 
         before(function (done) {
-            requirejs([ 'app/Model' ], function (Model) {
+            amd([ 'app/Model' ], function (Model) {
                 classes.Model = Model;
             });
         });
