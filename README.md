@@ -12,8 +12,8 @@ In *its* current state, **Backbone** provides no *Application*, something reflec
 
 And that's a good start.
 
-**Backapp** assumes these features and begins from there. In this context, the name, **Backapp**, refers to this project's key feature, what it has to contribute to the enterprise of application development in JavaScript - building **app**lications that are as capable of moving **back**ward through their previous states, as they are following the user's path forward to new ones. 
+**Backapp** assumes these features and begins from there. In this context, the name, **Backapp**, refers to this project's key feature, what it has to contribute to the enterprise of application development in JavaScript - building **App**lications that are as capable of moving **Back**ward through their previous states, as they are following the user's path forward to new ones. 
 
-To accomplish this, aside from `Application`, **Backapp** introduces two important feature implementations, `State` and `PersistenceStrategy`. The functionality of these classes is crucial for **backapps** to be able to implement **optimistic behavior**/**latency compensation** in their user experience with the capability to easily **return to any previous state** should the need arise. In **Backapp**, this understanding of the core functionality of what an application should be able to do is complemented by integrated support for **Test-Driven Development**, **Domain-Driven Design** and **modularity**.
+To accomplish this, aside from `Application`, **Backapp** introduces two important feature implementations, `State` and `PersistenceStrategy`. The functionality of these classes is crucial for **backapps** to be able to implement optimistic behavior/latency compensation in their views with the capability to easily return to any previous state should the need arise. In **Backapp**, this understanding of the core functionality of what an application should be able to do is complemented by integrated support for **Test-Driven Development**, **Domain-Driven Design** and **modularity**.
 
-Visit [backappjs.org](http://backappjs.org) to learn more.
+Visit **[backappjs.org](http://backappjs.org)** to learn more.
