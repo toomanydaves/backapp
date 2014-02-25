@@ -3,7 +3,7 @@
 
     var config = require('../../../setup/config');
 
-    var requirejs = config.requirejs;
+    var amd = config.amd;
     var expect = config.expect;
     var sandbox = config.sandbox.create();
     var spy = function () { return sandbox.spy(); };
@@ -16,7 +16,7 @@
         var deferred;
 
         before(function (done) {
-            requirejs([ 'app/PersistenceStrategy' ], function (PersistenceStrategy) {
+            amd([ 'app/PersistenceStrategy' ], function (PersistenceStrategy) {
                 classes.PersistenceStrategy = PersistenceStrategy;
 
                 done();
@@ -79,7 +79,7 @@
                 before(function (done) {
                     spy(persistenceStrategy, '_processRequest');
 
-                    requirejs([ 'jquery' ], function ($) {
+                    amd([ 'jquery' ], function ($) {
                         classes.$ = $;
 
                         stub($, 'ajax');
