@@ -9,13 +9,13 @@
 
 ### Backapp. ###
 
-**BACKAPP** is a tool for developing high-performance web **APP**lications built on top of [**BACK**boneJS](http://backbonejs.org).
+Backapp is a tool for developing high-performance web **APP**lications built on top of [**BACK**boneJS](http://backbonejs.org).
 
-Reflective of its commitment to the principle, *try to not do too much, but to do that well* (a decision in no small part responsible for its continued popularity), **Backbone** provides no `Application` object or class itself. That which **Backbone** does provide, namely `Model` and `Collection` classes implementing the Observer Pattern and introducing functional programming abstractions – it, indeed, does well.
+[Backbone](http://backbonejs.org) provides no `Application` object or class itself. The *backbone* of [Backbone](http://backbonejs.org) is its `Model` and `Collection` classes, which implement the Observer Pattern and introduce functional programming abstractions.
 
-**BACKAPP** introduces `Application`, `State`, and `PersistenceStrategy` classes into the mix.
+Backapp adds `Application`, `State`, and `PersistenceStrategy` classes into the mix.
 
-These classes provide functionality for behaving optimistically, compensating for network latency, and returning to previous states when the need arises, distinguishing **BACKAPPS** as **APP**lications that are as capable of moving **BACK**ward through their previous states, as they are following the user's path forward to new ones.
+These classes provide functionality for behaving optimistically, compensating for network latency, and returning to previous states when the need arises, and distinguish backapps as web **APP**lications that are as capable of moving **BACK**ward to previous states, as they are following the user's path forward to new ones.
 
 ### Learn more. ###
 Visit **[backappjs.org](http://backappjs.org)**.
