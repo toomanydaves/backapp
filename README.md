@@ -1,21 +1,21 @@
-[BackappJS](http://toomanydaves.github.io/backapp)
-================================================
+[Backapp JS](http://backbonejs.org)
+==========================
+
 > An extensible, single-page JavaScript application framework for domain-driven design.
 
-### Jump right in. ###
-`npm install -g backapp && backapp --help`
+### Jump in. ###
 
-### Backapp? ###
-The name **Backapp** – as shorthand for **Back**bone **App**lication – derives from the current state of this project: it is built atop the implementation of The Model/View([Observer](http://en.wikipedia.org/wiki/Observer_pattern)) Pattern provided by **[BackboneJS](http://backbonejs.org)** (And it's a tool for building applications). Of course, as any developer knows, state can change; yet were this project to stop depending on **Backbone** for this core functionality, the name **Backapp** would remain apt, and fortunately, for more than historical reasons.
+`npm install backapp && backapp --help`
 
-In *its* current state, **Backbone** provides no **Application**, something reflective of its commendable adherence to the design principle, **Try not to do too much**, which, it's worth mentioning, has in no small part been responsible for **Backbone's** continued popularity. Indeed, that which **Backbone** sets out to do, it does well – mainly provide base `View`, `Model` and `Collection` classes that support data-binding, in addition to functional programming abstractions (the latter of which is mainly accomplished by the inclusion of **Backbone's** own and only dependency, **[UnderscoreJS](http://underscorejs.org)**). 
+### Backapp. ###
 
-And that's a good start.
+**BACKAPP** is a tool for developing high-performance web **APP**lications built on top of [**BACK**boneJS](http://backbonejs.org).
 
-**Backapp** assumes these features and begins from there. In this context, the name, **Backapp**, refers to this project's key feature, what it has to contribute to the enterprise of application development in JavaScript - building **App**lications that are as capable of moving **Back**ward through their previous states, as they are following the user's path forward to new ones. 
+Reflective of its commitment to the principle, *try to not do too much, but to do that well* (a decision in no small part responsible for its continued popularity), **Backbone** provides no `Application` object or class itself. That which **Backbone** does provide, namely `Model` and `Collection` classes implementing the Observer Pattern and introducing functional programming abstractions – it, indeed, does well.
 
-To accomplish this, aside from `Application`, **Backapp** introduces two important feature implementations, `State` and `PersistenceStrategy`. The functionality of these classes is crucial for **backapps** to be able to implement optimistic behavior/latency compensation in their views with the capability to easily return to any previous state should the need arise. 
+**BACKAPP** introduces `Application`, `State`, and `PersistenceStrategy` classes into the mix.
 
-Similar to **Backbone's** inclusion of functional programming styles vis-a-vis **Underscore**, the core functionality of **Backapp** is complemented by integrated support for **Test-Driven Development**, **Domain-Driven Design** and **modularity**.
+These classes provide functionality for behaving optimistically, compensating for network latency, and returning to previous states when the need arises, distinguishing **BACKAPPS** as **APP**lications that are as capable of moving **BACK**ward through their previous states, as they are following the user's path forward to new ones.
 
-Visit **[backappjs.org](http://backappjs.org)** to learn more.
+### Learn more. ###
+Visit **[backappjs.org](http://backappjs.org)**.
