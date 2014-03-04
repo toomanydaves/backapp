@@ -1,10 +1,9 @@
 {
     "baseUrl": ".",
     "paths": {
-        "helpers": "app/utils/helpers",
+        "backbone": "lib/backbone/backbone",
         "jquery": "lib/jquery/jquery",
-        "lodash": "lib/lodash/lodash.compat",
-        "backbone": "lib/backbone/backbone"
+        "lodash": "lib/lodash/lodash.compat"
     },
     "shim": {
         "jquery": {
