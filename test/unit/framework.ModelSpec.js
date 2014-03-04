@@ -1,7 +1,7 @@
 (function (require, describe, it) {
     'use strict';
 
-    var config = require('../../setup/config');
+    var config = require('../setup/config');
     var amd = config.amd;
     var expect = config.expect;
     var sandbox = config.sandbox.create();
@@ -11,12 +11,19 @@
 
     describe('model', function () {
         var model;
-        var classes;
+        var modules = { };
 
         before(function (done) {
-            amd([ 'app/Model' ], function (Model) {
-                classes.Model = Model;
+            amd([ 'backbone', 'framework/Model' ], function (Backbone, Model) {
+                modules.Backbone = Backbone;
+                modules.Model = Model;
+
+                done();
             });
+        });
+
+        it('inherits from Backbone Model', function () {
+            expect(new modules.Model()).to.be.an.instanceof(modules.Backbone.Model);
         });
 
         describe('_nestedAttributes', function () {
