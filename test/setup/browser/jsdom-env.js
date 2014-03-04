@@ -16,7 +16,7 @@
     var jsdom = require('jsdom');
     var _ = require('lodash');
     var URL = require('url');
-    var requirejs = require('../../setup/requirejs');
+    var amd = require('../amd/requirejs');
 
 
     // Redefine jsdom methods to include a callback param in their signature to support async tests.
@@ -93,7 +93,7 @@
                 window.history._applyState = _applyState;
                 window.history._signalPopstate = _signalPopstate;
 
-                requirejs([ 'jquery', 'lodash' ], function (jquery, lodash) {
+                amd([ 'jquery', 'lodash' ], function (jquery, lodash) {
                     // Shim third-party [backbone] dependencies.
                     global.$ = jquery;
                     global._ = lodash;
