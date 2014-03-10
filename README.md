@@ -7,7 +7,7 @@
 
 `npm install backapp && backapp --help`
 
-### Backapp. ###
+### Back app. ###
 
 Backapp is a tool for developing high-performance web **APP**lications built on top of [**BACK**boneJS](http://backbonejs.org).
 
