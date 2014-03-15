@@ -15,7 +15,7 @@ Backbone commendably ships with as few frills as possible, including no `App` cl
 
 **Backapp** adds `App`, as well as `State`, and `PersistenceStrategy` classes to the mix.
 
-These classes provide functionality for applications to behave optimistically when dealing network latency. They distinguish **backapp**s as **APP**s, as capable moving **BACK** to previous states when the need arises, as they are following the user's path forward to new ones.
+These classes provide functionality to behave optimistically when dealing network latency. They distinguish **backapp**s as **APP**s, as capable moving **BACK** to previous states when the need arises, as they are following the user's path forward to new ones.
 
 ### Learn more. ###
 Visit **[backappjs.org](http://backappjs.org)**.
