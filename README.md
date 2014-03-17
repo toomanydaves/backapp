@@ -37,6 +37,6 @@ In the spirit of open source software development:
 
 ## Run with it: Tasks ##
 Currently **BACKAPP** uses [GruntJS](http://gruntjs.com) as its task runner.
-### Install dependencies ###
-### Build a distribution ###
-### Generate documentation ###
+### Install dependencies. ###
+### Build a distribution. ###
+### Generate documentation. ###
