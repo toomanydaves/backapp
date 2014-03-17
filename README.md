@@ -40,19 +40,19 @@ Currently **BACKAPP** uses [GruntJS](http://gruntjs.com) as its task runner.
 ### Install dependencies. ###
 `grunt install`
 
-Current [list of dependencies](https://github.com/toomanydaves/backapp/blob/master/bower.json).
-Running this task will put the dependency source in `lib/`.
+Running this task will put the dependency source in `lib/`
+([List of dependencies](https://github.com/toomanydaves/backapp/blob/master/bower.json)).
 
 ### Build a distribution. ###
 `grunt build`
 
-Running this task will put the built source in `dist/[version number]/`.
-Version information is found [here](https://github.com/toomanydaves/backapp/blob/master/package.json)
+Running this task will put the built source in `dist/[version]/`
+([Version information](https://github.com/toomanydaves/backapp/blob/master/package.json)).
 
 ### Generate documentation. ###
 `grunt docs`
 
-Running this task will put the documentation in `docs/` and start a server to view the docs online at `localhost:8080`.
+Running this task will put the documentation in `docs/` and start a server at `localhost:8080`.
 
 [backapp-issues-url]: http://github.com/toomanydaves/backapp/issues
 [backapp-pledges-url]: https://pledgie.com/campaigns/24553
