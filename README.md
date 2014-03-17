@@ -9,7 +9,7 @@
 [**BACK**boneJS](http://backbonejs.org).
 
 Backbone commendably ships with as few frills as possible, including no `App` class or object.
-The "backbone" of Backbone resides entirely in its `Model`, `Collection` and  `Event` classes.
+The "*backbone*" of Backbone resides entirely in its `Model`, `Collection` and  `Event` classes.
 They implement the [Observer Pattern](http://en.wikipedia.org/wiki/Observer_pattern)
 and support a [functional programming style](http://en.wikipedia.org/wiki/Functional_programming).
 
@@ -23,22 +23,20 @@ as they are following the user's path forward to new ones.
 Visit **[backappjs.org](http://backappjs.org)**, or check the
 [Docs](http://toomanydaves.github.io/backapp/docs).
 
-## Contribute your verse. ##
+## Contribute a verse. ##
 In the spirit of open source software development:
 * If you find a bug/issue, please
 [report it](http://github.com/toomanydaves/backapp/issues).
 * If you're interested in contributing, but don't know where to start, consult the
 [Road Map](http://trello.com/toomanydaves/backapp).
-* Finally, for any style related questions, these are the
+* For any style related questions, these are the
 [Coding Guidelines](http://toomanydaves.github.io/backapp/style-guide).
-
-Or, if you just like what you see,
+* If you just like what you see,
 [give a shout]() or
 [a coffee](https://pledgie.com/campaigns/24553)
 
-## Get up and running with tasks. ###
+## Run with it: Tasks ##
 Currently **BACKAPP** uses [GruntJS](http://gruntjs.com) as its task runner.
-
-### Docs ###
-### Source builds ###
-### Dependency injection ###
+### Install dependencies ###
+### Build a distribution ###
+### Generate documentation ###
