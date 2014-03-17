@@ -1,8 +1,8 @@
 # [BackappJS](http://backbonejs.org) #
 [![NPM version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
-[![Dependency Status][depstat-image]][depstat-url] 
 [![Coverage Status][coveralls-image]][coveralls-url]
+[![Dependency Status][depstat-image]][depstat-url] 
 > An extensible, single-page JavaScript application framework for domain-driven design.
 
 ## Jump in. ##
@@ -12,11 +12,9 @@
 **BACKAPP** is a tool for developing high-performance web **APP**s, currently built on top of
 [**BACK**boneJS](http://backbonejs.org).
 
-Backbone commendably ships with as few frills as possible, including no `App` class or object.
 The *backbone* of Backbone resides entirely in its `Model`, `Collection` and  `Event` classes.
 They implement the [Observer Pattern](http://en.wikipedia.org/wiki/Observer_pattern)
 and support a [functional programming style](http://en.wikipedia.org/wiki/Functional_programming).
-
 **BACKAPP** introduces `App`, as well as `State`, and `PersistenceStrategy` classes into the mix.
 
 These classes provide functionality to behave optimistically when dealing network latency. 
@@ -62,7 +60,7 @@ Running this task will put the documentation in `docs/` and start a server at `l
 [npm-image]: https://badge.fury.io/js/backapp.png
 [travis-url]: https://travis-ci.org/toomanydaves/backapp
 [travis-image]: https://travis-ci.org/toomanydaves/backapp.png
-[coveralls-url]: https://coveralls.io/r/toomanydaves/backapp
-[coveralls-image]: https://coveralls.io/repos/toomanydaves/backapp/badge.png
 [depstat-url]: https://david-dm.org/toomanydaves/backapp
 [depstat-image]: https://david-dm.org/toomanydaves/backapp.png
+[coveralls-url]: https://coveralls.io/r/toomanydaves/backapp
+[coveralls-image]: https://coveralls.io/repos/toomanydaves/backapp/badge.png
