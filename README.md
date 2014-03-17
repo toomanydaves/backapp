@@ -22,3 +22,12 @@ They distinguish **BACKAPP**s as **APP**s, as capable moving **BACK** to prior s
 
 ### Learn more. ###
 Visit **[backappjs.org](http://backappjs.org)**.
+
+### Contribute. ###
+TODO
+
+### Run the tests. ###
+TODO
+
+### Build the source. ###
+TODO
