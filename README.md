@@ -29,15 +29,10 @@ Visit **[backappjs.org](http://backappjs.org)**, or check the
 
 ## Contribute a verse. ##
 In the spirit of open source software development:
-* If you find a bug/issue, please
-[report it][backapp-issues-url].
-* If you're interested in contributing, but don't know where to start, consult the
-[Road Map][backapp-road-map-url].
-* For any style related questions, here's the
-[Style Guide][backapp-style-guide-url].
-* If you just like what you see and wanna give
-[a shout][backapp-star-url] or
-[a coffee][backapp-pledges-url].
+* If you find a bug/issue, please [report it][backapp-issues-url].
+* If you're interested in contributing, but don't know where to start, consult the [Road Map][backapp-road-map-url].
+* For any style related questions, here's the [Style Guide][backapp-style-guide-url].
+* If you just like what you see, give the repo a star or [a coffee][backapp-pledges-url].
 
 ## Run with it: Tasks ##
 Currently **BACKAPP** uses [GruntJS](http://gruntjs.com) as its task runner.
@@ -57,7 +52,6 @@ Version information is found [here](https://github.com/toomanydaves/backapp/blob
 ### Generate documentation. ###
 `grunt docs`
 
-[backapp-star-url]: http://github.com/
 [backapp-issues-url]: http://github.com/toomanydaves/backapp/issues
 [backapp-pledges-url]: https://pledgie.com/campaigns/24553
 [backapp-road-map-url]: http://trello.com/toomanydaves/backapp
