@@ -6,7 +6,7 @@
 > An extensible, single-page JavaScript application framework for domain-driven design.
 
 ## Jump in. ##
-`npm install backapp`
+`npm install backapp` or `git clone http://github.com/toomanydaves/backapp`
 
 ## Back app. ##
 **BACKAPP** is a tool for developing high-performance web **APP**s, currently built on top of
@@ -30,14 +30,14 @@ Visit **[backappjs.org](http://backappjs.org)**, or check the
 ## Contribute a verse. ##
 In the spirit of open source software development:
 * If you find a bug/issue, please
-[report it](http://github.com/toomanydaves/backapp/issues).
+[report it][backapp-issues-url].
 * If you're interested in contributing, but don't know where to start, consult the
-[Road Map](http://trello.com/toomanydaves/backapp).
-* For any style related questions, these are the
-[Coding Guidelines](http://toomanydaves.github.io/backapp/style-guide).
-* If you just like what you see,
-[give a shout]() or
-[a coffee](https://pledgie.com/campaigns/24553)
+[Road Map][backapp-road-map-url].
+* For any style related questions, here's the
+[Style Guide][backapp-style-guide].
+* If you just like what you see and wanna give
+[a shout][backapp-star-url] or
+[a coffee][backapp-pledges-url].
 
 ## Run with it: Tasks ##
 Currently **BACKAPP** uses [GruntJS](http://gruntjs.com) as its task runner.
@@ -45,16 +45,27 @@ Currently **BACKAPP** uses [GruntJS](http://gruntjs.com) as its task runner.
 ### Install dependencies. ###
 `grunt install`
 
+Current [list of dependencies](https://github.com/toomanydaves/backapp/blob/master/bower.json).
+Running this task will put the dependency source in `lib/`.
+
 ### Build a distribution. ###
 `grunt build`
+
+Running this task will put the build source in `dist/[version number]/`.
+Version information is found [here](https://github.com/toomanydaves/backapp/blob/master/package.json)
 
 ### Generate documentation. ###
 `grunt docs`
 
+[backapp-pledges-url]: https://pledgie.com/campaigns/24553
+[backapp-issues-url]: http://github.com/toomanydaves/backapp/issues
+[backapp-road-map-url]: http://trello.com/toomanydaves/backapp
+[backapp-style-guide-url]: http://toomanydaves.github.io/backapp/style-guide
+
 [npm-url]: https://npmjs.org/package/gulp
 [npm-image]: https://badge.fury.io/js/gulp.png
 [travis-url]: https://travis-ci.org/gulpjs/gulp
-[travis-image]: https://travis-ci.org/gulpjs/gulp.png?branch=master
+[travis-image]: https://travis-ci.org/gulpjs/gulp.png
 [coveralls-url]: https://coveralls.io/r/gulpjs/gulp
 [coveralls-image]: https://coveralls.io/repos/gulpjs/gulp/badge.png
 [depstat-url]: https://david-dm.org/gulpjs/gulp
