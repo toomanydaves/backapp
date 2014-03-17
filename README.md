@@ -1,4 +1,8 @@
 # [BackappJS](http://backbonejs.org) #
+[![NPM version][npm-image]][npm-url]
+[![Build Status][travis-image]][travis-url]
+[![Coveralls Status][coveralls-image]][coveralls-url]
+[![Dependency Status][daviddm-url]][daviddm-image] 
 > An extensible, single-page JavaScript application framework for domain-driven design.
 
 ## Jump in. ##
@@ -37,6 +41,12 @@ In the spirit of open source software development:
 
 ## Run with it: Tasks ##
 Currently **BACKAPP** uses [GruntJS](http://gruntjs.com) as its task runner.
+
 ### Install dependencies. ###
+`grunt install`
+
 ### Build a distribution. ###
+`grunt build`
+
 ### Generate documentation. ###
+`grunt docs`
