@@ -1,8 +1,8 @@
 # [BackappJS](http://backbonejs.org) #
 [![NPM version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
+[![Dependency Status][depstat-image]][depstat-url] 
 [![Coverage Status][coveralls-image]][coveralls-url]
-[![Dependency Status][depstat-url]][depstat-image] 
 > An extensible, single-page JavaScript application framework for domain-driven design.
 
 ## Jump in. ##
