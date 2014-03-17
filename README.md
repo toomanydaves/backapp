@@ -13,7 +13,7 @@
 
 Backbone commendably ships with as few frills as possible, including no `App` class or object (the "backbone" of Backbone residing in its `Model`, `Collection` and  `Event` classes, which implement the [Observer Pattern](http://en.wikipedia.org/wiki/Observer_pattern) and introduce [functional programming](http://en.wikipedia.org/wiki/Functional_programming) abstractions).
 
-**Backapp** adds `App`, as well as `State`, and `PersistenceStrategy` classes to the mix.
+**Backapp** introduces `App`, as well as `State`, and `PersistenceStrategy` classes into the mix.
 
 These classes provide functionality to behave optimistically when dealing network latency. They distinguish **backapp**s as **APP**s, as capable moving **BACK** to previous states when the need arises, as they are following the user's path forward to new ones.
 
