@@ -1,4 +1,4 @@
-(function (require, module) {
+(function (global, require, module) {
     'use strict';
 
     /**
@@ -103,4 +103,4 @@
             }
         });
     };
-})(require, module);
+})(global, require, module);

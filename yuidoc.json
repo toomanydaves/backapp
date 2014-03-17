@@ -1,0 +1,14 @@
+{
+  "name": "backapp",
+  "version": "0.0.1",
+  "description": "An extensible, single-page JavaScript application framework for domain-driven design",
+  "url": "http://backappjs.org",
+  "author": "Sean Jacke <seanineurope@gmail.com> (https://github.com/toomanydaves)",
+  "options": {
+    "exclude": "node_modules,lib,test",
+    "outdir": "./docs/dist",
+    "paths": "src",
+    "tabtospace": 4,
+    "linkNatives": true
+  }
+}

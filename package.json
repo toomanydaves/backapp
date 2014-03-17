@@ -4,7 +4,11 @@
   "description": "An extensible, single-page application framework for domain-driven design",
   "homepage": "http://backappjs.org",
   "license": "MIT",
-  "keywords": [ "amd", "backbone", "framework" ],
+  "keywords": [
+    "amd",
+    "backbone",
+    "framework"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/toomanydaves/backapp.git"
@@ -25,6 +29,7 @@
     "mocha": "*",
     "requirejs": "~2.1.10",
     "sinon": "~1.8.1",
-    "sinon-chai": "~2.5.0"
+    "sinon-chai": "~2.5.0",
+    "yuidocjs": "~0.3.48"
   }
 }

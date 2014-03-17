@@ -1,6 +1,7 @@
 {
     "baseUrl": ".",
     "paths": {
+        "framework": "src/framework",
         "backbone": "lib/backbone/backbone",
         "jquery": "lib/jquery/jquery",
         "lodash": "lib/lodash/lodash.compat"

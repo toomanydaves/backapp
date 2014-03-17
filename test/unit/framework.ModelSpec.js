@@ -3,6 +3,7 @@
 
     var config = require('../setup/config');
     var amd = config.amd;
+    var browser = config.browser;
     var expect = config.expect;
     var sandbox = config.sandbox.create();
     var spy = function () { return sandbox.spy(); };
@@ -14,11 +15,13 @@
         var modules = { };
 
         before(function (done) {
-            amd([ 'backbone', 'framework/Model' ], function (Backbone, Model) {
-                modules.Backbone = Backbone;
-                modules.Model = Model;
+            browser.call(this, void 0, function () {
+                amd([ 'backbone', 'framework/Model' ], function (Backbone, Model) {
+                    modules.Backbone = Backbone;
+                    modules.Model = Model;
 
-                done();
+                    done();
+                });
             });
         });
 
