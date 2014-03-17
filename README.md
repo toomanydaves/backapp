@@ -28,7 +28,6 @@ Visit **[backappjs.org](http://backappjs.org)**, or check the
 [Docs](http://toomanydaves.github.io/backapp/docs).
 
 ## Contribute a verse. ##
-In the spirit of open source software development:
 * If you find a bug/issue, please [report it][backapp-issues-url].
 * If you're interested in contributing, but don't know where to start, consult the [Road Map][backapp-road-map-url].
 * For any style related questions, here's the [Style Guide][backapp-style-guide-url].
