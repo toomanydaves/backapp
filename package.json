@@ -1,35 +1,50 @@
 {
   "name": "backapp",
   "version": "0.0.1",
-  "description": "An extensible, single-page application framework for domain-driven design",
   "homepage": "http://backappjs.org",
-  "license": "MIT",
-  "keywords": [
-    "amd",
-    "backbone",
-    "framework"
-  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/toomanydaves/backapp.git"
   },
-  "author": "Sean Jacke <seanineurope@gmail.com> (https://github.com/toomanydaves)",
-  "bugs": "https://github.com/toomanydaves/backapp/issues?labels=bug",
+  "description": "An extensible, single-page JavaScript application framework for domain-driven design",
+  "author": "Sean Paul Jacke <seanineurope@gmail.com> (https://github.com/toomanydaves)",
+  "license": "MIT",
+  "keywords": [
+    "backapp",
+    "library",
+    "backbone",
+    "framework",
+    "application",
+    "zero-latency",
+    "domain-driven",
+    "mvc",
+    "amd"
+  ],
+  "main": "dist/backapp.js",
+  "dependencies": { },
   "devDependencies": {
-    "bower": "~1.2.0",
+    "bower": "*",
     "chai": "*",
-    "grunt": "~0.4.1",
-    "grunt-bower-task": "~0.3.2",
-    "grunt-contrib-clean": "~0.5.0",
-    "grunt-contrib-copy": "~0.5.0",
-    "grunt-contrib-handlebars": "~0.6.1",
-    "grunt-contrib-yuidoc": "~0.5.0",
-    "jsdom": "~0.10.1",
-    "lodash": "~2.4.1",
+    "grunt": "*",
+    "grunt-bower-task": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-handlebars": "*",
+    "grunt-contrib-yuidoc": "*",
+    "jsdom": "*",
+    "lodash": "*",
     "mocha": "*",
-    "requirejs": "~2.1.10",
-    "sinon": "~1.8.1",
-    "sinon-chai": "~2.5.0",
-    "yuidocjs": "~0.3.48"
-  }
+    "requirejs": "*",
+    "sinon": "*",
+    "sinon-chai": "*",
+    "yuidocjs": "*"
+  },
+  "scripts": {
+    "build": "npm install && grunt",
+    "start": "grunt watch",
+    "test": "grunt test",
+    "dist": "grunt dist",
+    "docs": "grunt docs"
+  },
+  "bugs": "https://github.com/toomanydaves/backapp/issues?labels=bug"
 }
