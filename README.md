@@ -25,12 +25,6 @@ as they are following the user's path forward to new ones.
 Visit **[backappjs.org](http://backappjs.org)**, or check the
 [Docs](http://toomanydaves.github.io/backapp/docs).
 
-## Contribute a verse. ##
-* If you find a bug/issue, please [report it][backapp-issues-url].
-* If you're interested in contributing, but don't know where to start, consult the [Road Map][backapp-road-map-url].
-* For any style related questions, here's the [Style Guide][backapp-style-guide-url].
-* If you just like what you see, give the repo a star or [a coffee][backapp-pledges-url].
-
 ## Run with it: Tasks ##
 Currently **BACKAPP** uses [GruntJS](http://gruntjs.com) as its task runner.
 
@@ -50,6 +44,12 @@ Running this task will put the built source in `dist/[version]/`
 `grunt docs`
 
 Running this task will put the documentation in `docs/` and start a server at `localhost:8080`.
+
+## Contribute a verse. ##
+* If you find a bug/issue, please [report it][backapp-issues-url].
+* If you're interested in contributing, but don't know where to start, consult the [Road Map][backapp-road-map-url].
+* For any style related questions, here's the [Style Guide][backapp-style-guide-url].
+* If you just like what you see, give the repo a star or [a coffee][backapp-pledges-url].
 
 [backapp-issues-url]: http://github.com/toomanydaves/backapp/issues
 [backapp-pledges-url]: https://pledgie.com/campaigns/24553
