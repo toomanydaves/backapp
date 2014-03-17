@@ -50,3 +50,14 @@ Currently **BACKAPP** uses [GruntJS](http://gruntjs.com) as its task runner.
 
 ### Generate documentation. ###
 `grunt docs`
+
+[npm-url]: https://npmjs.org/package/gulp
+[npm-image]: https://badge.fury.io/js/gulp.png
+[travis-url]: https://travis-ci.org/gulpjs/gulp
+[travis-image]: https://travis-ci.org/gulpjs/gulp.png?branch=master
+[coveralls-url]: https://coveralls.io/r/gulpjs/gulp
+[coveralls-image]: https://coveralls.io/repos/gulpjs/gulp/badge.png
+[depstat-url]: https://david-dm.org/gulpjs/gulp
+[depstat-image]: https://david-dm.org/gulpjs/gulp.png
+[daviddm-url]: https://david-dm.org/gulpjs/gulp.png?theme=shields.io
+[daviddm-image]: https://david-dm.org/gulpjs/gulp
