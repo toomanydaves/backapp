@@ -5,10 +5,10 @@
 [![Dependency Status][depstat-image]][depstat-url] 
 > An extensible, single-page JavaScript application framework for domain-driven design.
 
-## Jump in. ##
+## Jump in ##
 `npm install backapp` or `git clone http://github.com/toomanydaves/backapp`.
 
-## Back app. ##
+## Back app ##
 **BACKAPP** is a tool for developing high-performance web **APP**s, currently built on top of
 [**BACK**boneJS](http://backbonejs.org).
 
