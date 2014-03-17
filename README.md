@@ -27,6 +27,7 @@ Visit **[backappjs.org](http://backappjs.org)**, or check the
 
 ## Run with it: Tasks ##
 Currently **BACKAPP** uses [GruntJS](http://gruntjs.com) as its task runner.
+`grunt` to run everything.
 
 ### Install dependencies. ###
 `grunt install`
