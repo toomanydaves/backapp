@@ -36,7 +36,7 @@ Or, if you just like what you see,
 [give a shout]() or
 [a coffee](https://pledgie.com/campaigns/24553)
 
-## Get up and runnint with  tasks. ###
+## Get up and running with tasks. ###
 Currently **BACKAPP** uses [GruntJS](http://gruntjs.com) as its task runner.
 
 ### Docs ###
