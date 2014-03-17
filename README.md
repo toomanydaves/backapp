@@ -46,11 +46,13 @@ Running this task will put the dependency source in `lib/`.
 ### Build a distribution. ###
 `grunt build`
 
-Running this task will put the build source in `dist/[version number]/`.
+Running this task will put the built source in `dist/[version number]/`.
 Version information is found [here](https://github.com/toomanydaves/backapp/blob/master/package.json)
 
 ### Generate documentation. ###
 `grunt docs`
+
+Running this task will put the documentation in `docs/` and start a server to view the docs online at `localhost:8080`.
 
 [backapp-issues-url]: http://github.com/toomanydaves/backapp/issues
 [backapp-pledges-url]: https://pledgie.com/campaigns/24553
