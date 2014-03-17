@@ -21,7 +21,7 @@ These classes provide functionality to behave optimistically when dealing networ
 They distinguish **BACKAPP**s as **APP**s as capable moving **BACK** to prior states,
 as they are following the user's path forward to new ones.
 
-## Learn more. ##
+## Learn more ##
 Visit **[backappjs.org](http://backappjs.org)**, or check the
 [Docs](http://toomanydaves.github.io/backapp/docs).
 
@@ -29,24 +29,24 @@ Visit **[backappjs.org](http://backappjs.org)**, or check the
 Currently **BACKAPP** uses [GruntJS](http://gruntjs.com) as its task runner.
 `grunt` to run everything.
 
-### Install dependencies. ###
+### Install dependencies ###
 `grunt install`
 
 Running this task will put the dependency source in `lib/`
 ([List of dependencies](https://github.com/toomanydaves/backapp/blob/master/bower.json)).
 
-### Build a distribution. ###
+### Build a distribution ###
 `grunt build`
 
 Running this task will put the built source in `dist/[version]/`
 ([Version information](https://github.com/toomanydaves/backapp/blob/master/package.json)).
 
-### Generate documentation. ###
+### Generate documentation ###
 `grunt docs`
 
 Running this task will put the documentation in `docs/` and start a server at `localhost:8080`.
 
-## Contribute a verse. ##
+## Contribute a verse ##
 * If you find a bug/issue, please [report it][backapp-issues-url].
 * If you're interested in contributing, but don't know where to start, consult the [Road Map][backapp-road-map-url].
 * For any style related questions, here's the [Style Guide][backapp-style-guide-url].
