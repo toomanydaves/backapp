@@ -1,4 +1,4 @@
-[Backapp JS](http://backbonejs.org)
+[BackappJS](http://backbonejs.org)
 ==========================
 
 > An extensible, single-page JavaScript application framework for domain-driven design.
@@ -7,15 +7,18 @@
 
 `npm install backapp && backapp --help`
 
-### Backapp. ###
+### Back app. ###
 
-Backapp is a tool for developing high-performance web **APP**lications built on top of [**BACK**boneJS](http://backbonejs.org).
+**Backapp** is a tool for developing high-performance web **APP**s, currently built on top of [**BACK**boneJS](http://backbonejs.org).
 
-[Backbone](http://backbonejs.org) provides no `Application` object or class itself. The *backbone* of [Backbone](http://backbonejs.org) is its `Model` and `Collection` classes, which implement the Observer Pattern and introduce functional programming abstractions.
+Backbone commendably ships with as few frills as possible, including no `App` class or object.
+The "backbone" of Backbone resides entirely in its `Model`, `Collection` and  `Event` classes.
+They implement the [Observer Pattern](http://en.wikipedia.org/wiki/Observer_pattern) and support a [functional programming](http://en.wikipedia.org/wiki/Functional_programming) style.
 
-Backapp adds `Application`, `State`, and `PersistenceStrategy` classes into the mix.
+**Backapp** introduces `App`, as well as `State`, and `PersistenceStrategy` classes into the mix.
 
-These classes provide functionality for behaving optimistically, compensating for network latency, and returning to previous states when the need arises, and distinguish backapps as web **APP**lications that are as capable of moving **BACK**ward to previous states, as they are following the user's path forward to new ones.
+These classes provide functionality to behave optimistically when dealing network latency. 
+They distinguish **backapp**s as **APP**s, as capable moving **BACK** to prior states as they are following the user's path forward to new ones.
 
 ### Learn more. ###
 Visit **[backappjs.org](http://backappjs.org)**.
