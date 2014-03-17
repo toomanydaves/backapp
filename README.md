@@ -58,11 +58,11 @@ Running this task will put the documentation in `docs/` and start a server at `l
 [backapp-road-map-url]: http://trello.com/toomanydaves/backapp
 [backapp-style-guide-url]: http://toomanydaves.github.io/backapp/style-guide
 
-[npm-url]: https://npmjs.org/package/gulp
-[npm-image]: https://badge.fury.io/js/gulp.png
-[travis-url]: https://travis-ci.org/gulpjs/gulp
-[travis-image]: https://travis-ci.org/gulpjs/gulp.png
-[coveralls-url]: https://coveralls.io/r/gulpjs/gulp
-[coveralls-image]: https://coveralls.io/repos/gulpjs/gulp/badge.png
-[depstat-url]: https://david-dm.org/gulpjs/gulp
-[depstat-image]: https://david-dm.org/gulpjs/gulp.png
+[npm-url]: https://npmjs.org/package/backapp
+[npm-image]: https://badge.fury.io/js/backapp.png
+[travis-url]: https://travis-ci.org/toomanydaves/backapp
+[travis-image]: https://travis-ci.org/toomanydaves/backapp.png
+[coveralls-url]: https://coveralls.io/r/toomanydaves/backapp
+[coveralls-image]: https://coveralls.io/repos/toomanydaves/backapp/badge.png
+[depstat-url]: https://david-dm.org/toomanydaves/backapp
+[depstat-image]: https://david-dm.org/toomanydaves/backapp.png
