@@ -9,10 +9,10 @@
 `npm install backapp` or `git clone http://github.com/toomanydaves/backapp`.
 
 ## Back app ##
-**BACKAPP** is a tool for developing high-performance web **APP**s, currently built on top of
+**BACKAPP** is a tool for developing high-performance web **APP**s built on top of
 [**BACK**boneJS](http://backbonejs.org).
 
-The *backbone* of Backbone resides entirely in its `Model`, `Collection` and  `Event` classes.
+The *backbone* of Backbone resides in its `Model`, `Collection` and  `Event` classes.
 They implement the [Observer Pattern](http://en.wikipedia.org/wiki/Observer_pattern)
 and support a [functional programming style](http://en.wikipedia.org/wiki/Functional_programming).
 **BACKAPP** introduces `App`, as well as `State`, and `PersistenceStrategy` classes into the mix.
@@ -50,9 +50,9 @@ Running this task will put the documentation in `docs/` and start a server at `l
 * If you find a bug/issue, please [report it][backapp-issues-url].
 * If you're interested in contributing, but don't know where to start, consult the [Road Map][backapp-road-map-url].
 * For any style related questions, here's the [Style Guide][backapp-style-guide-url].
-* If you just like what you see, give the repo a star or [a coffee][backapp-pledges-url].
+* If you just like what you see, give a star or [a coffee][backapp-pledges-url].
 
-[backapp-issues-url]: http://github.com/toomanydaves/backapp/issues
+[backapp-issues-url]: http://github.com/toomanydaves/backapp/issues?labels=bug
 [backapp-pledges-url]: https://pledgie.com/campaigns/24553
 [backapp-road-map-url]: http://trello.com/toomanydaves/backapp
 [backapp-style-guide-url]: http://toomanydaves.github.io/backapp/style-guide
