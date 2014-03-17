@@ -1,19 +1,19 @@
 # [BackappJS](http://backbonejs.org) #
 [![NPM version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
-[![Coveralls Status][coveralls-image]][coveralls-url]
-[![Dependency Status][daviddm-url]][daviddm-image] 
+[![Coverage Status][coveralls-image]][coveralls-url]
+[![Dependency Status][depstat-url]][depstat-image] 
 > An extensible, single-page JavaScript application framework for domain-driven design.
 
 ## Jump in. ##
-`npm install backapp` or `git clone http://github.com/toomanydaves/backapp`
+`npm install backapp` or `git clone http://github.com/toomanydaves/backapp`.
 
 ## Back app. ##
 **BACKAPP** is a tool for developing high-performance web **APP**s, currently built on top of
 [**BACK**boneJS](http://backbonejs.org).
 
 Backbone commendably ships with as few frills as possible, including no `App` class or object.
-The "*backbone*" of Backbone resides entirely in its `Model`, `Collection` and  `Event` classes.
+The *backbone* of Backbone resides entirely in its `Model`, `Collection` and  `Event` classes.
 They implement the [Observer Pattern](http://en.wikipedia.org/wiki/Observer_pattern)
 and support a [functional programming style](http://en.wikipedia.org/wiki/Functional_programming).
 
@@ -34,7 +34,7 @@ In the spirit of open source software development:
 * If you're interested in contributing, but don't know where to start, consult the
 [Road Map][backapp-road-map-url].
 * For any style related questions, here's the
-[Style Guide][backapp-style-guide].
+[Style Guide][backapp-style-guide-url].
 * If you just like what you see and wanna give
 [a shout][backapp-star-url] or
 [a coffee][backapp-pledges-url].
@@ -57,8 +57,9 @@ Version information is found [here](https://github.com/toomanydaves/backapp/blob
 ### Generate documentation. ###
 `grunt docs`
 
-[backapp-pledges-url]: https://pledgie.com/campaigns/24553
+[backapp-star-url]: http://github.com/
 [backapp-issues-url]: http://github.com/toomanydaves/backapp/issues
+[backapp-pledges-url]: https://pledgie.com/campaigns/24553
 [backapp-road-map-url]: http://trello.com/toomanydaves/backapp
 [backapp-style-guide-url]: http://toomanydaves.github.io/backapp/style-guide
 
@@ -70,5 +71,3 @@ Version information is found [here](https://github.com/toomanydaves/backapp/blob
 [coveralls-image]: https://coveralls.io/repos/gulpjs/gulp/badge.png
 [depstat-url]: https://david-dm.org/gulpjs/gulp
 [depstat-image]: https://david-dm.org/gulpjs/gulp.png
-[daviddm-url]: https://david-dm.org/gulpjs/gulp.png?theme=shields.io
-[daviddm-image]: https://david-dm.org/gulpjs/gulp
