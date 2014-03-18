@@ -21,7 +21,23 @@
     "amd"
   ],
   "main": "dist/backapp.js",
-  "dependencies": { },
+  "dependencies": {
+      "backbone": "1.0.x",
+      "backbone.stickit": "0.6.x",
+      "backbone-validation": "0.8.x",
+      "bootstrap": "^2",
+      "bootstrap-wysihtml5": null,
+      "handlebars": "^1",
+      "jquery": "1.9.x",
+      "jquery-color": "https://github.com/jquery/jquery-color.git#2.1.2",
+      "jquery-mousewheel": "3.1.x",
+      "lodash": "2.4.*",
+      "momentjs": "2.2.x",
+      "moment-timezone": null,
+      "pikaday": null,
+      "requirejs": "^2",
+      "select2": "3.4.x"
+  },
   "devDependencies": {
     "bower": "*",
     "chai": "*",
