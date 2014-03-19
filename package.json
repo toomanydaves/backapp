@@ -2,25 +2,20 @@
   "name": "backapp",
   "version": "0.0.1",
   "homepage": "http://backappjs.org",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/toomanydaves/backapp.git"
-  },
-  "description": "An extensible, single-page JavaScript application framework for domain-driven design",
   "author": "Sean Paul Jacke <seanineurope@gmail.com> (https://github.com/toomanydaves)",
+  "description": "An extensible, single-page JavaScript application framework for domain-driven design",
+  "keywords": ["amd", "application", "backapp", "backbone", "domain-driven", "framework", "mvc", "zero-latency" ],
+  "repository": { "type": "git", "url": "https://github.com/toomanydaves/backapp.git" },
+  "bugs": "https://github.com/toomanydaves/backapp/issues?labels=bug",
   "license": "MIT",
-  "keywords": [
-    "backapp",
-    "library",
-    "backbone",
-    "framework",
-    "application",
-    "zero-latency",
-    "domain-driven",
-    "mvc",
-    "amd"
-  ],
   "main": "dist/backapp.js",
+  "scripts": {
+    "build": "npm install && grunt",
+    "start": "grunt watch",
+    "test": "grunt test",
+    "dist": "grunt dist",
+    "docs": "grunt docs"
+  },
   "dependencies": {
       "backbone": "1.0.x",
       "backbone.stickit": "0.6.x",
@@ -39,6 +34,7 @@
       "select2": "3.4.x"
   },
   "devDependencies": {
+    "archiver": "*",
     "bower": "*",
     "chai": "*",
     "grunt": "*",
@@ -46,7 +42,10 @@
     "grunt-contrib-clean": "*",
     "grunt-contrib-copy": "*",
     "grunt-contrib-handlebars": "*",
+    "grunt-contrib-watch": "*",
     "grunt-contrib-yuidoc": "*",
+    "grunt-jsonlint": "*",
+    "gzip-js": "*",
     "jsdom": "*",
     "lodash": "*",
     "mocha": "*",
@@ -54,13 +53,5 @@
     "sinon": "*",
     "sinon-chai": "*",
     "yuidocjs": "*"
-  },
-  "scripts": {
-    "build": "npm install && grunt",
-    "start": "grunt watch",
-    "test": "grunt test",
-    "dist": "grunt dist",
-    "docs": "grunt docs"
-  },
-  "bugs": "https://github.com/toomanydaves/backapp/issues?labels=bug"
+  }
 }
