@@ -1,12 +1,20 @@
-[BackappJS](http://toomanydaves.github.io/backapp)
+[BackApp](http://toomanydaves.github.io/backapp)
 ================================================
-> An extensible, single-page JavaScript application framework for domain-driven design.
+> A framework for developing extensible, single-page web applications using domain-driven design.
 
 ### Jump right in. ###
 `npm install -g backapp && backapp --help`
 
-### Backapp? ###
-The name **Backapp** – as shorthand for **Back**bone **App**lication – derives from the current state of this project: it is built atop the implementation of The Model/View([Observer](http://en.wikipedia.org/wiki/Observer_pattern)) Pattern provided by **[BackboneJS](http://backbonejs.org)** (And it's a tool for building applications). Of course, as any developer knows, state can change; yet were this project to stop depending on **Backbone** for this core functionality, the name **Backapp** would remain apt, and fortunately, for more than historical reasons.
+### Wait a sec! "BackApp"!? ###
+*BackApp* could be understood as a framework of creating applications in [Backbone](http://backbonejs.org), but that's not the case. It was inspired by backbone, but it no longer depends on it. BackApp could also be interpreted as a tool for apps that go backwards, which is in fact true, and also an important feature -- because they can roll back operations intelligently, backapps are as capable moving back to previous states, as they are following the user's interaction forward to new ones.
+
+### OK, so "Back" is important. What's with "App"? ###
+This is the heart of what BackApp brings to the table. An Application class, as well as a PageRouter and PageController class, a ViewController and ViewModel class, and a ModelResource and a CollectionResource class. There's no View class because the view itself is assumed to be custom HTML templates, CSS styles and JavaScript widgets.
+
+### But there's more ###
+For example, modules. Each file
+
+the aderives from the current state of this project: it is built atop the implementation of The Model/View([Observer](http://en.wikipedia.org/wiki/Observer_pattern)) Pattern provided by **[BackboneJS](http://backbonejs.org)** (And it's a tool for building applications). Of course, as any developer knows, state can change; yet were this project to stop depending on **Backbone** for this core functionality, the name **Backapp** would remain apt, and fortunately, for more than historical reasons.
 
 In *its* current state, **Backbone** provides no **Application**, something reflective of its commendable adherence to the design principle, **Try not to do too much**, which, it's worth mentioning, has in no small part been responsible for **Backbone's** continued popularity. Indeed, that which **Backbone** sets out to do, it does well – mainly provide base `View`, `Model` and `Collection` classes that support data-binding, in addition to functional programming abstractions (the latter of which is mainly accomplished by the inclusion of **Backbone's** own and only dependency, **[UnderscoreJS](http://underscorejs.org)**). 
 
