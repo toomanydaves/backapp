@@ -1,16 +1,23 @@
-[BackApp](http://toomanydaves.github.io/backapp)
+BackThatDomainApp
 ================================================
-> A framework for developing extensible, single-page web applications using domain-driven design.
+> BackThatDomainApp, or [BackApp](http://toomanydaves.github.io/backapp) for short, is a framework for developing extensible, single-page web applications using domain-driven design.
 
 ### Jump right in. ###
 `npm install -g backapp && backapp --help`
 
-### Wait a sec! "BackApp"!? ###
-*BackApp* could be understood as a framework of creating applications in [Backbone](http://backbonejs.org), but that's not the case. It was inspired by backbone, but it no longer depends on it. BackApp could also be interpreted as a tool for apps that go backwards, which is in fact true, and also an important feature -- because they can roll back operations intelligently, backapps are as capable moving back to previous states, as they are following the user's interaction forward to new ones.
+### Wait a sec! "BackApp"!? How 'bout some more info...###
+*BackApp* could be understood as a framework of creating applications in [Backbone](http://backbonejs.org), but that's not the case. However, it was inspired by backbone, but it no longer depends on it. BackApp could also be interpreted as a tool for apps that go backwards, which is in fact true, and also an important feature -- because they can roll back operations intelligently, backapps are as capable moving back to previous states, as they are following the user's interaction forward to new ones.
 
-### OK, so "Back" is important. What's with "App"? ###
+### What was that about domain-driven design? ###
+We'll get to that later.
+
+### OK, so at least "Back" is more or less clear. What's with "App"? ###
 This is the heart of what BackApp brings to the table. An Application class, as well as a PageRouter and PageController class, a ViewController and ViewModel class, and a ModelResource and a CollectionResource class. There's no View class because the view itself is assumed to be custom HTML templates, CSS styles and JavaScript widgets.
 
+The ModelResource and CollectionResource are the interface to the persistance layer in the form of a RESTful API. They bear some similarity to Backbone's Model and Collection classes, but have a more defined scope -- to map to resources -- and a different API.
+
+### And now, domain-driven design? ###
+Well, you could in theory use the BackApp classes however you want, but you'd be missing out on the ability of domain-driven design to tackle the complexity at the heart of software development. By isolating all your framework code, you're free to focus on your domain, and that's good because your domain is what makes your software, your software. 
 ### But there's more ###
 For example, modules. Each file
 
