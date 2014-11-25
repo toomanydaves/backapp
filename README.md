@@ -17,7 +17,7 @@ Although, it originally grew out of Backbone, BackApp no longer has any dependen
 ### But what was that about domain-driven design? ###
 We'll get to that later.
 
-### OK, so at least "Back" is more or less clear. What's with "App"? ###
+### OK, so at least *Back* is more or less clear. What's with *App*? ###
 This is the heart of what BackApp brings to the table. An Application class (BackApp.js), as well as a Router and a RouteController class, a ViewController and a ViewModel class, and a ModelResource and a CollectionResource class.
 There's no View class because a view is supposed to be dumb and consist of non-class-like things, like HTML elements, CSS styles and JavaScript widgets (and in the future, web components).
 
