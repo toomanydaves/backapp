@@ -6,11 +6,11 @@ BackThatDomainApp
 `npm install -g backapp && backapp --help`
 
 ### Wait a sec! Back app!? Say what? ###
-Judging by its name and the fact that it's an open-source JavaScript library, it would be reasonable to assume that "Back"-"App" is a framework for creating "app"lications in ["Back"bone.js](http://backbonejs.org), like, say, [Backbone.Marionette](http://) is.
+Judging by its name and the fact that it's an open-source library for the web, it would be reasonable to assume that *Back* - *App* is a framework for creating *app*-lications in [*Back*-bone.js](http://backbonejs.org), like, say, [Backbone.Marionette](http://) is.
 
 But it's not. At least, it's not a framework for "backbone applications".
 
-Although, it originally grew out of Backbone, BackApp no longer relies on it.
+Although, it originally grew out of Backbone, BackApp no longer has any dependency on Backbone.
 
 "Back"-"App" could also be interpreted as a tool for building "app"s that go "back"wards, which, in fact, it is -- because they have been designed with the capasity to rollback operations intelligently, backApps are as capable moving back to previous states, as they are following the user's interaction forward to new ones.
 
