@@ -6,28 +6,28 @@ BackThatDomainApp
 `npm install -g backapp && backapp --help`
 
 ### Wait a sec! Back app!? How 'bout some more info? ###
-Judging by its name and the fact that it's an open-source JavaScript library, it would be reasonable to assume that "BackApp" is a framework for creating applications in [Backbone.js](http://backbonejs.org). Like [Backbone.Marionette](http://)).
+Judging by its name and the fact that it's an open-source JavaScript library, it would be reasonable to assume that "Back"-"App" is a framework for creating "app"lications in ["Back"bone.js](http://backbonejs.org), like, say, [Backbone.Marionette](http://) is.
 
-But it's not.
+But it's not. At least, it's not a framework for "backbone applications".
 
 Although, it originally grew out of Backbone, BackApp no longer relies on it.
 
-"BackApp" could also be interpreted as a tool for building apps that go backwards, which, in fact, it is -- because they have been designed with the capasity to rollback operations intelligently, backApps are as capable moving back to previous states, as they are following the user's interaction forward to new ones.
+"Back"-"App" could also be interpreted as a tool for building "app"s that go "back"wards, which, in fact, it is -- because they have been designed with the capasity to rollback operations intelligently, backApps are as capable moving back to previous states, as they are following the user's interaction forward to new ones.
 
-### What was that about domain-driven design? ###
+### But what was that about domain-driven design? ###
 We'll get to that later.
 
 ### OK, so at least "Back" is more or less clear. What's with "App"? ###
-This is the heart of what BackApp brings to the table. An Application class (BackApp.js), as well as a PageRouter and PageController class, a ViewController and ViewModel class, and a ModelResource and a CollectionResource class.
+This is the heart of what BackApp brings to the table. An Application class (BackApp.js), as well as a Router and a RouteController class, a ViewController and a ViewModel class, and a ModelResource and a CollectionResource class.
 
-(There's no View class because a view is supposed to be dumb and consist of non-class things, like HTML elements, CSS styles and JavaScript widgets.)
+There's no View class because a view is supposed to be dumb and consist of non-class-like things, like HTML elements, CSS styles and JavaScript widgets (and in the future, web components).
 
-The ModelResource and CollectionResource are the interface to the persistance layer in the form of a RESTful API. They bear some similarity to Backbone's Model and Collection classes, but have a more defined scope -- to map to resources -- and a slightly different API.
+The ModelResource and CollectionResource are the interface to the persistance layer in the form of a RESTful API. They bear some similarity to Backbone's Model and Collection classes, but have a more defined scope -- to map to resources -- and a somewhat different API.
 
 There are a couple of dependencies, [requirejs](http://) for asynchronous module loading, [lodash](http://) for functional programming utilities, [something](http://) for events, [something](http://) for promises, [something](http://) for HTML integration and [something](http://) for HTTP.
 
-### Back app, you said REST, what about domain-driven design? ###
-Well, you could, in theory, use the BackApp classes however you want, but you'd be missing out on the ability of domain-driven design to tackle the complexity at the heart of software development. (And also the fun generators that allow this framework to be used with npm.)
+### Back app, you said REST. What about DDD? ###
+Well, you could, in theory, use the BackApp classes however you want, but you'd be missing out on the ability of domain-driven design to tackle the complexity at the heart of software development. (And also the fun code generators that allow this framework to be used with npm.)
 
 The point is, by isolating all your framework code, you're free to focus on your domain, and that's good because your domain is what makes your software, your software. And that's where domain-driven design comes in.
 
