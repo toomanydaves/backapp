@@ -5,7 +5,7 @@ BackThatDomainApp
 ### Jump right in. ###
 `npm install -g backapp && backapp --help`
 
-### Wait a sec! Back app!? How 'bout some more info? ###
+### Wait a sec! Back app!? Say what? ###
 Judging by its name and the fact that it's an open-source JavaScript library, it would be reasonable to assume that "Back"-"App" is a framework for creating "app"lications in ["Back"bone.js](http://backbonejs.org), like, say, [Backbone.Marionette](http://) is.
 
 But it's not. At least, it's not a framework for "backbone applications".
