@@ -27,7 +27,7 @@ Well, you could, in theory, use the BackApp classes however you want, but you'd 
 
 There's a pattern.
 
-Your application's domain is divided into bounded contexts. Each bounded context consists of a Router and a RouteController, services and resources. The services should be defined by your domain; they will often correspond to RESTful endpoints, however, while REST is confined to the mapping of a specific set of resources to a generic set of actions, a service-oriented architecture can go one domain-driven step further and map to a specific set of actions.
+Your application's domain is divided into bounded contexts. Each bounded context consists of a Router and a FrontController, services and resources. The services should be defined by your domain; they will often correspond to RESTful endpoints, however, while REST is confined to the mapping of a specific set of resources to a generic set of actions, a service-oriented architecture can go one domain-driven step further and map to a specific set of actions.
 
 For example, whereas an action at the persistance layer (REST) would look something like PUT written-exams/{id}/start-time, an action at the service layer can be more explicit, like startWrittenExam/.
 
