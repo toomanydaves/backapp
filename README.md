@@ -15,10 +15,10 @@ Although, it originally grew out of Backbone, BackApp no longer has any dependen
 *Back*-*App* could also be interpreted as a tool for building *app*-s that go *back*-wards, which, in fact, it is -- because they have been designed with the capasity to rollback operations intelligently, backApps are as capable moving back to previous states, as they are following the user's interaction forward to new ones.
 
 ### OK, so at least *Back* is more or less clear. What's with *App*? ###
-This is the heart of what BackApp brings to the table. An Application class (BackApp.js), as well as a Router and a RouteController class, a ViewController and a ViewModel class, and a ModelResource and a CollectionResource class.
-There's no View class because a view is supposed to be dumb and consist of non-class-like things, like HTML elements, CSS styles and JavaScript widgets (and in the future, web components).
+This is the heart of what BackApp brings to the table. An Application class (BackApp.js), as well as a Router and a FrontController class, a ViewController and a ViewModel class, and a Resource and a ResourceCollection class.
+There's no View class because in traditional MVC, views are best served lean, i.e. dumb, and should not be class-like things, but instead more like templates, here HTML nodes, CSS styles and JavaScript widgets (and in the future, web components).
 
-The ModelResource and CollectionResource are the interface to the persistance layer in the form of a RESTful API. They bear some similarity to Backbone's Model and Collection classes, but have a more defined scope -- to map to resources -- and a somewhat different API.
+The Resource and ResourceCollection are the interface to persistance over a RESTful API. They bear some similarity to Backbone's Model and Collection classes, but have a slightly smaller, more defined scope -- to represent resources associated with specific URLs and handle persistance and the syncing of data.
 
 There are a couple of dependencies, [requirejs](http://) for asynchronous module loading, [lodash](http://) for functional programming utilities, [something](http://) for events, [something](http://) for promises, [something](http://) for HTML integration and [something](http://) for HTTP.
 
