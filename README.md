@@ -1,4 +1,4 @@
-BackThatDomainApp
+BackThatDomainApp > BackApp
 ================================================
 > BackThatDomainApp, or [**backapp**](http://toomanydaves.github.io/backapp) for short, is a framework for developing extensible, single-page web applications using Domain-Driven Design.
 
@@ -6,7 +6,7 @@ BackThatDomainApp
 `npm install -g backapp && backapp --help`
 
 ### Wait a sec! Back app!? Say what? ###
-If you just knew its name, **backapp**, and the fact that it's an open-source library for the web, you could be forgiven for assuming that "Back App" is for creating *app*-lications in [*Back*-boneJS](http://backbonejs.org), like, say, [Backbone.Marionette](http://) is.
+If you just knew its name, **backapp**, and the fact that it's an open-source library for the web, you could be forgiven for assuming that "Back App" is a framework for creating *app*-lications using [*Back*-boneJS](http://backbonejs.org), like, say, [Backbone.Marionette](http://) is.
 
 But it's not. At least, it's not a framework for *Backbone* applications.
 
@@ -15,6 +15,7 @@ Although it did originally grow out of work done using Backbone, **backapp** cur
 "Back App" could also be the name of a tool for building *app*-s that go *back*-wards, which, in fact, it is. Because they have been designed with the useful ability to rollback operations intelligently, backapps are as capable moving back to previous states, as they are following the user's interaction forward to new ones.
 
 ### Wait, forget about *Back* for a second. What about *App*? ###
+The app in backapp is a single-page web application. Backapps are built for use in the web stack -- HTML, CSS and JavaScript -- and assume the existence of window and document, as well as to be given full control over document they are passed.
 This is the heart of what backapp brings to the table. An Application class -- as well as a Router and a FrontController class, a ViewController and a ViewModel class, and a Resource and a ResourceCollection class.
 
 You'll notice there's no View class. In traditional MVC, views are best served thin, i.e. dumb, and should not be class-like things, but instead more like templates. In backapps, they are typically a combination of HTML fragments, CSS styles and JavaScript widgets and binding code (in the future, hopefully, web components).
